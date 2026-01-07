@@ -1,0 +1,66 @@
+/* =========================================================
+   DARK THEME — elegante, contrastado, premium
+   ========================================================= */
+
+:root.theme-dark {
+  --background: #0c0c0e;
+  --surface: #161618;
+  --text-color: #efefef;
+  --text-soft: #b6b6b6;
+  --primary: #4fa7ff;
+  --accent: #59ffb0;
+  --glow-color: rgba(100, 160, 255, 0.65);
+
+
+ background: radial-gradient(circle at top, #001a0f, #000);
+  color: var(--text-color);
+}
+
+/* Cards */
+:root.theme-dark .card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.45);
+
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+
+/* Links */
+:root.theme-dark a {
+  color: var(--primary);
+}
+:root.theme-dark a:hover {
+  text-shadow: 0 0 12px var(--primary);
+}
+:root.theme-dark .header-home{
+  background: rgba(0, 20, 10, 0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 25px rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+:root.theme-matrix .contatos-container .form{
+  background: rgba(0, 20, 10, 0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 32px rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+}
+:rootbody.theme-dark {
+  --glow-color: rgba(100, 160, 255, 0.65);
+
+  background: radial-gradient(circle at 30% 15%, #1d1d20 0%, #0c0c0e 60%);
+  animation: darkShift 0.6s ease forwards;
+}
+
+@keyframes darkShift {
+  from {
+    background: #000;
+  }
+  to {
+    background: radial-gradient(circle at 30% 15%, #1d1d20 0%, #0c0c0e 60%);
+  }
+}
+

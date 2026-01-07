@@ -1,0 +1,96 @@
+
+@use '_mixins' as *;
+.sobre-container {
+
+  margin-top: 21rem;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  transition: opacity 0.3s ease-out;
+  will-change: opacity;
+
+  .title {
+    font-size: 3.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    line-height: 1.7;
+    opacity: 0.85;
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .list {
+    padding-left: 1.5rem;
+    line-height: 1.9;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .links {
+    margin-top: 1rem;
+
+    a {
+      margin-right: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+
+      &:hover {
+        filter: brightness(1.4);
+      }
+    }
+  }
+
+}
+@include mobile {
+  .sobre-container{
+    margin-top: 14rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    opacity: 0.85;
+    width: 100%;
+    margin-left: 0;
+  .text{
+    width: 100%;
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .title{
+    font-size: 2.4rem;
+  }
+  }
+
+}
+@include mobile-landscape {
+  .sobre-container{
+    margin-top: 11.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    opacity: 0.85;
+    width: 100%;
+
+  }
+
+  .sobre-container h2{
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+ .sobre-container  .text{
+    font-size: 1.2rem;
+    width: 70%;
+  }
+}

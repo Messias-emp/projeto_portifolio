@@ -1,0 +1,50 @@
+/* =========================================================
+   LIGHT THEME — moderno, limpo e elegante
+   ========================================================= */
+
+:root.theme-light {
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --text-color: #8aa3bd;
+  --text-soft: #555;
+  --primary: #007bff;
+  --accent: #38c98b;
+  --glow-color: rgba(0, 125, 255, 0.45);
+
+  background: var(--background);
+  color: var(--text-color);
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+/* Cards */
+:root.theme-light .card {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border-radius: 14px;
+
+}
+
+/* Links */
+:root.theme-light a {
+  color: var(--primary);
+}
+:root.theme-light a:hover {
+  text-shadow: 0 0 10px var(--primary);
+}
+:rootbody.theme-light {
+  --glow-color: rgba(0, 125, 255, 0.45);
+
+  background: linear-gradient(135deg, #f1f3f6, #ffffff);
+  animation: lightGlow 0.6s ease forwards;
+}
+
+@keyframes lightGlow {
+  from {
+    filter: brightness(0.85);
+  }
+  to {
+    filter: brightness(1);
+  }
+}
+

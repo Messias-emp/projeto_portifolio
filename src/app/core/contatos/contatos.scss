@@ -1,0 +1,71 @@
+
+@use '_mixins' as *;
+.contatos-container {
+margin-top: 25rem;
+margin-left: 3rem;
+max-width: 1000px;
+transition: padding var(--transition-speed) ease;
+  .title {
+    font-size: 3.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .text {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 480px;
+
+    input,
+    textarea {
+      padding: 1rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: inherit;
+      resize: none;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+
+  @include mobile {
+    .contatos-container{
+    margin-top: 18.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    opacity: 0.85;
+    width: 100%;
+    }
+  }
+
+
+@include mobile-landscape {
+  .contatos-container{
+    margin-top: 11.5rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    width: 100%;
+
+  }
+
+  .contatos-container h2{
+    font-size: 1.5rem;
+
+  }
+
+  p{
+    font-size: 1rem;
+    width: 70%;
+  }
+}

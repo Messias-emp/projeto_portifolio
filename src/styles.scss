@@ -1,0 +1,114 @@
+// styles.scss
+// Arquivo global que compõe todos os temas.
+// Usamos @use para evitar warnings de import legacy.
+
+@use 'app/styles/themes/light';
+@use 'app/styles/themes/dark';
+@use 'app/styles/themes/matrix';
+
+/* Base global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Inter, Roboto, system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 220ms ease, color 220ms ease;
+}
+/* Transições globais e suaves (sem travar o layout) */
+:root {
+  --transition-speed: 0.45s;
+  --layout-max-width: 1280px;
+  --layout-padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+* {
+  transition:
+    background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease,
+    border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    filter var(--transition-speed) ease;
+}
+/* ===============================
+   Container de layout central
+   =============================== */
+
+:root {
+  --layout-max-width: 1280px;
+  --layout-padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+.layout-container {
+  width: 100%;
+  max-width: var(--layout-max-width);
+
+  margin-inline: auto;     // centraliza horizontalmente
+
+}
+
+
+
+/* Exemplo de token para componentes */
+/* ===============================
+   Componente base: Card
+   =============================== */
+
+.card {
+  background: var(--surface-color);
+  color: var(--text-color);
+
+  padding: 1rem;
+  border-radius: var(--radius);
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+
+/* Matrix canvas: fica atrás e não captura eventos */
+:host {
+  position: fixed;
+  inset: 0;              // top:0 right:0 bottom:0 left:0
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -1;            // camada base
+  pointer-events: none;  // não bloqueia cliques
+}
+
+
+/* ===============================
+   Canvas Matrix (background)
+   =============================== */
+
+.matrix-canvas {
+  position: fixed;
+  inset: 0;
+
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; // nunca interfere na UI
+}
+
+
+
+/* Conteúdo principal acima do canvas */
+/* ===============================
+   Conteúdo principal da aplicação
+   =============================== */
+
+.app-root {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  min-height: 100vh;
+}
+
+

@@ -1,0 +1,192 @@
+@use '_mixins' as *;
+.certificacoes {
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  margin: 1.5rem 1.5rem;
+  margin-top: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 3.4rem;
+  }
+
+  ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  }
+
+  li {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: var(--soft-shadow);
+    gap: 1.5rem;
+
+    span{
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--accent);
+
+    }
+  }
+}
+/**
+ * :host representa o próprio componente
+ * <app-cursos-certificacoes>
+ *
+ * Aqui definimos o estado inicial da animação
+ */
+:host {
+  display: block; // Garante comportamento de bloco
+  opacity: 0;     // Começa invisível
+  transform: translateY(50px); // Leve deslocamento vertical
+  transition:
+  opacity 0.9s ease,
+  transform 0.9s ease;
+}
+
+/**
+ * Classe aplicada dinamicamente pelo IntersectionObserver
+ * Quando adicionada, o componente aparece suavemente
+ */
+:host(.visible) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   MODAL BACKDROP
+   ================================ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ================================
+   MODAL CONTAINER
+   ================================ */
+.modal {
+  width: min(90vw, 900px);
+  height: min(85vh, 600px);
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--soft-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+    z-index: 25;
+  animation: scaleIn 0.25s ease;
+}
+
+/* HEADER DO MODAL */
+.modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-main);
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--accent);
+    cursor: pointer;
+  }
+}
+
+/* PDF */
+.modal iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #000;
+  z-index: 100;
+}
+
+/* BOTÃO */
+.btn-cert {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+/* ================================
+   ANIMAÇÕES
+   ================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); }
+  to   { transform: scale(1); }
+}
+
+@include mobile {
+.certificacoes {
+
+    font-size: 0.9rem;
+    width: 24rem;
+  }
+
+
+    h2 {
+      font-size: 1.2rem;
+    }
+    li{
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+
+
+    }
+  }
+
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+
+@include mobile-landscape {
+  .certificacoes {
+    margin-top: 11.5rem;
+    font-size: 1.2rem;
+  }
+  a{
+    margin: 0;
+  }
+}
+
