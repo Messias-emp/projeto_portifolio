@@ -110,10 +110,9 @@
 /* ------------------- MOBILE PORTRAIT (390x896) ------------------- */
 @include mobile {
   .header-home {
-   position: fixed;
-
-    height: 12%;
-    width: 375px;
+  position: fixed;
+    height: 14%;
+    width: 100%;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 
     .logo-area {
@@ -141,13 +140,14 @@
     }
 @include mobile-landscape {
   .header-home {
-    height: 8rem;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    height: 5rem;
+    margin: 0.8rem 0.7rem 0.7rem 0.7rem;
+    width: 100%;
 
     .logo-area {
       img {
-        height: 100px;
-        width: 100px;
+    height: 65px;
+    width: 65px;
       }
 
       .brand {

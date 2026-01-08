@@ -111,11 +111,12 @@
 
 @include mobile-landscape{
     .home-container {
-        margin-top: 11.5rem;
-          display: flex;
-        flex-wrap: wrap;
+    margin-top: 6.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1rem;
     .home-content{
-.title {
+     .title {
       font-size: 2.4rem;
 
     }
