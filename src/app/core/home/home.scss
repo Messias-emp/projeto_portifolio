@@ -81,14 +81,17 @@
 @include mobile {
   .home-container {
     margin: 4rem 1rem 1rem 1rem;
-    width: 102%;
+    width: 100%;
 
 
     .home-content{
     position: relative;
     z-index: 2;
     line-height: 1.7;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+  }
     }
     .title {
       font-size: 1.4rem;
@@ -111,7 +114,7 @@
   padding-left: 1rem;
     }
   }
-}
+
 
 @include mobile-landscape{
     .home-container {
