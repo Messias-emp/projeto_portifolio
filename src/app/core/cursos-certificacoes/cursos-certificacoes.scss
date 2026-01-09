@@ -155,14 +155,17 @@
 @include mobile {
 .certificacoes {
 
-
     font-size: 1rem;
     width: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+
   }
 
 
     h2 {
-      font-size: 2.4rem;
+      margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
     }
     li{
 
