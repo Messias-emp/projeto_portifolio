@@ -106,8 +106,9 @@ html, body {
 .app-root {
   position: relative;
   z-index: 1;
-
-  display: block;
+  width: 100%;
+  height: auto;
+  display: flex;
 
 }
 

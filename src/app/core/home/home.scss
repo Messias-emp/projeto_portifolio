@@ -22,7 +22,7 @@
 
 
   line-height: 1.7;
-  font-size: 1.5rem;
+  
 }
 
 
@@ -80,28 +80,23 @@
 
 @include mobile {
   .home-container {
-    margin: 8rem 1rem 1rem 1rem;
+    margin: 0;
     width: 100%;
 
 
     .home-content{
-      margin-top: 11rem;
-    position: relative;
+    margin-top: 11rem;
     z-index: 2;
-    line-height: 1.7;
-    font-size: 2.4rem;
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+
   }
     }
     .title {
       font-size: 1.4rem;
-    padding: 2rem;
+    
 
     }
     .subtitle{
     font-size: 1rem;
-    text-align: start;
     padding-bottom: 1rem;
     }
     p{
