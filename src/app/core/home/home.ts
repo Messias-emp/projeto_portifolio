@@ -19,7 +19,7 @@ export class Home {
     const scrollTop = window.scrollY || 0;
 
     // Define até onde o efeito acontece (em px)
-    const fadeLimit = 100;
+    const fadeLimit = 20;
 
     // Calcula a opacidade (1 → 0)
     this.contentOpacity = Math.max(

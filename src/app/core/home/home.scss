@@ -9,7 +9,7 @@
   text-align: justify;
   transition: opacity 0.3s ease-out;
   will-change: opacity;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .home-content {
   position: relative;
@@ -23,7 +23,15 @@
 
 
   line-height: 1.7;
-  
+background: var(--bg-main);
+  color: var(--text-main);
+
+  transition:
+    opacity 0.3s ease,
+    background 0.6s ease,
+    color 0.6s ease;
+
+  will-change: opacity;
 }
 
 
