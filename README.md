@@ -1,59 +1,57 @@
-# Y
+# 🚀 Portfólio Front-End
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+Portfólio profissional desenvolvido para apresentar projetos, habilidades técnicas e experiência em Front-End, com foco em **performance, responsividade, acessibilidade e experiência do usuário**.
 
-## Development server
+## 🎯 Objetivo
+Transformar requisitos e ideias em **interfaces modernas, escaláveis e orientadas a resultados**, demonstrando boas práticas de código, organização e design consistente.
 
-To start a local development server, run:
+## 🧠 Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+### Front-End
+- **Angular**
+- **TypeScript**
+- **JavaScript**
+- **HTML5**
+- **SCSS (Sass)**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Estilização & UI
+- Temas **Dark / Light / Matrix**
+- Design responsivo (Mobile, Tablet e Desktop)
+- Animações e transições suaves
+- Foco em **UI/UX** e acessibilidade
 
-## Code scaffolding
+### Boas Práticas
+- Componentização
+- Clean Code
+- Organização escalável de estilos
+- Versionamento com **Git**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📱 Responsividade
+O layout foi projetado para se adaptar a diferentes resoluções:
+- Mobile (portrait e landscape)
+- Tablet
+- Desktop e telas maiores
 
-```bash
-ng generate component component-name
-```
+## 📂 Estrutura do Projeto
+src/
+├── app/
+│ ├── components/
+│ ├── pages/
+│ └── styles/
+├── assets/
+└── styles.scss
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🔗 Funcionalidades
+- Navegação por rotas
+- Seção de projetos
+- Cursos e certificações com visualização em PDF
+- Contatos com links externos (WhatsApp, LinkedIn, GitHub)
+- Transições visuais entre temas
 
-```bash
-ng generate --help
-```
+## 📌 Status
+Projeto em evolução contínua, com foco em melhoria de performance, experiência do usuário e novas features.
 
-## Building
+---
 
-To build the project run:
+Desenvolvido com foco em qualidade, clareza e entrega de valor.
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
