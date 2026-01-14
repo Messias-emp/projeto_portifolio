@@ -2,16 +2,17 @@
 @use '_mixins' as *;
 .sobre-container {
 
-  margin-top: 21rem;
+  margin-top: 12rem;
   margin-left: 3rem;
   display: flex;
   flex-direction: column;
   text-align: justify;
   transition: opacity 0.3s ease-out;
   will-change: opacity;
+  margin-bottom: 2rem;
 
   .title {
-    font-size: 3.4rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
@@ -21,7 +22,7 @@
     width: 70%;
     line-height: 1.7;
     opacity: 0.85;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
 
   .section-title {

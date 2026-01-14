@@ -2,17 +2,18 @@
 @use '_mixins' as *;
 
 .theme-switcher {
+  
   position: fixed;
   display: flex;
   flex-direction: row;
-  top: 21rem;
+  top: 10rem;
   right: 1.2rem;
   z-index: 30;
 
 
   align-items: center;
   gap: 0.5rem;
-  padding: 0.9rem;
+  padding: 0.1rem;
   border-radius: 999px;
 
   /* 🎯 Pílula verde x vermelha */
@@ -104,9 +105,8 @@ body.theme-matrix .theme-switcher button.active {
 
   @include mobile{
   .theme-switcher{
-    margin-top: -12rem;
-    width: 32%;
-    height: 1%;
+    width: 35%;
+    height: 4%;
 
      button {
       border-radius: 10%;

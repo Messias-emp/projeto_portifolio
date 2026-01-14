@@ -1,26 +1,68 @@
 
 @use '_mixins' as *;
 .contatos-container {
-margin-top: 25rem;
-margin-left: 3rem;
-max-width: 1000px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+margin-top: 12rem;
+gap: 1rem;
 transition: padding var(--transition-speed) ease;
+z-index: 3;
+
   .title {
-    font-size: 3.4rem;
+    font-size: 2rem;
     margin-bottom: 1.2rem;
   }
+  .contact-icons {
+  display: flex;
+  justify-content: center;
+    gap: 1rem;
+  
+}
+
+/* Link do ícone */
+.icon-link {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(0, 255, 120, 0.35);
+
+  transition: all 0.35s ease;
+
+  img {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    filter:
+      drop-shadow(0 0 6px rgba(0, 255, 120, 0.8));
+      
+  }
+
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+      0 0 25px rgba(0, 255, 120, 0.7);
+
+  }
+}
+
 
   .text {
     opacity: 0.8;
-    margin-bottom: 2rem;
+    max-width: 60%;
+    font-size: 0.9rem;
   }
 
   .form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 480px;
-
+    gap: 0.5rem;
+    max-width: 500px;
+    max-height: 200px;
     input,
     textarea {
       padding: 1rem;
