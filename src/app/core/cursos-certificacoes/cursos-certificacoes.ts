@@ -127,14 +127,18 @@ closeModal(): void {
       pdfUrl: 'assets/certificados/certificado-back-end.pdf'
     },
     {
+      titulo: 'Ciência de Dados com Python.',
+      instituicao: '(Plataforma DIO)',
+      descricao: 'Nas habilidades: Python, Análise de Dados, Banco de Dados, ETL, AWS, Machine Learning',
+      pdfUrl: 'assets/certificados/etl_com_python.png'
+    },
+    {
       titulo: 'Formação: Lógica de Programação e Git/GitHub.',
       instituicao: '(Plataforma DIO)',
       descricao: 'Nas habilidades: Lógica de Programação com JavaScript.',
       pdfUrl: 'assets/certificados/cert-logica-programacao.pdf'
     },
   ];
-
-
 
 }
 
