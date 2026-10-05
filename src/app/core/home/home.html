@@ -1,7 +1,8 @@
-<section class="home-container layout-container">
+<!-- Seção Hero/Home -->
+<section id="home" class="home-container layout-container">
   <div class="home-content" [style.opacity]="contentOpacity">
     <div class="hero-badge">
-      <span class="badge-icon">⚡</span>
+      <span class="badge-icon">&lt;Dev/&gt;</span>
       <span>Desenvolvedor FrontEnd / Backend</span>
     </div>
 
@@ -21,13 +22,13 @@
     </p>
 
     <div class="cta-area">
-      <a routerLink="/projetos" class="btn btn-primary" routerLinkActive="active">
+      <a href="#projetos" class="btn btn-primary">
         <span>Ver Projetos</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
-      <a routerLink="/contatos" class="btn btn-secondary">
+      <a href="#contatos" class="btn btn-secondary">
         <span>Entre em Contato</span>
       </a>
     </div>
@@ -47,6 +48,66 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- Seção Sobre -->
+<section id="sobre" class="sobre-container layout-container">
+  <div class="section-header">
+    <h1 class="title">Sobre Mim</h1>
+  </div>
+
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        Olá! Sou o <strong>Emanuel Pinheiro</strong>, desenvolvedor Front-End focado na criação de interfaces
+        modernas, responsivas e acessíveis, com atenção total à experiência do usuário e à qualidade visual.
+      </p>
+
+      <p>
+        Gosto de transformar ideias e requisitos em soluções digitais bem estruturadas, intuitivas e eficientes.
+        Atuo principalmente com <strong>Angular</strong>, <strong>React</strong>, <strong>JavaScript</strong>,
+        <strong>TypeScript</strong>, <strong>HTML5</strong> e <strong>SCSS</strong>, aplicando componentização,
+        boas práticas de código e organização escalável.
+      </p>
+
+      <p>
+        Meu foco é desenvolver aplicações front-end sólidas, com performance consistente e layouts que funcionam
+        bem em diferentes dispositivos. Tenho afinidade com UI/UX, prezando por usabilidade, clareza e
+        consistência visual.
+      </p>
+
+      <p>
+        Acredito que um bom front-end vai além da aparência: ele entrega fluidez, entendimento e valor real
+        para o usuário. Atualmente, estou em constante evolução técnica, construindo projetos práticos e
+        aprofundando meus conhecimentos para entregar interfaces cada vez mais profissionais.
+      </p>
+
+      <div class="cta-box">
+        <p>
+          <strong>Busco oportunidades</strong> onde eu possa contribuir, aprender e crescer,
+          gerando impacto positivo por meio da tecnologia.
+        </p>
+        <a href="#contatos" class="btn-primary">
+          <span>Vamos conversar?</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-skills-impact></app-skills-impact>
+
+<!-- Seção Projetos -->
+<section id="projetos">
+  <app-projetos></app-projetos>
+</section>
+
+<!-- Seção Contatos -->
+<section id="contatos">
+  <app-contatos></app-contatos>
 </section>
 
 <app-cursos-certificacoes></app-cursos-certificacoes>

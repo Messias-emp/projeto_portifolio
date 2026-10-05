@@ -45,18 +45,28 @@
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(var(--primary-rgb, 102, 126, 234), 0.1);
-  border: 1px solid rgba(var(--primary-rgb, 102, 126, 234), 0.3);
+  gap: 0.6rem;
+  padding: 0.4rem 1rem;
+  background: rgba(var(--primary-rgb, 37, 99, 235), 0.08);
+  border: 1.5px solid rgba(var(--primary-rgb, 37, 99, 235), 0.25);
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--primary);
   width: fit-content;
+  box-shadow: 0 2px 8px rgba(var(--primary-rgb, 37, 99, 235), 0.1);
 
   .badge-icon {
-    font-size: 1.2rem;
+    font-family: 'Fira Code', 'Cascadia Code', Consolas, Monaco, monospace;
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 0.15rem 0.5rem;
+    background: var(--surface, #ffffff);
+    color: var(--primary);
+    border-radius: 6px;
+    border: 1px solid rgba(var(--primary-rgb, 37, 99, 235), 0.2);
+    letter-spacing: -0.5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   }
 }
 
