@@ -1,0 +1,115 @@
+@use '_mixins' as *;
+
+.sobre-container {
+  min-height: 100vh;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  transition: opacity 0.3s ease-out;
+  will-change: opacity;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  line-height: 1.8;
+
+  p {
+    font-size: 1.125rem;
+    opacity: 0.85;
+    margin: 0;
+
+    strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
+}
+
+.cta-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: rgba(var(--primary-rgb, 102, 126, 234), 0.05);
+  border: 1px solid rgba(var(--primary-rgb, 102, 126, 234), 0.2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+
+  p {
+    margin: 0;
+    font-size: 1.125rem;
+    opacity: 0.9;
+
+    strong {
+      color: var(--primary);
+    }
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb, 102, 126, 234), 0.3);
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(var(--primary-rgb, 102, 126, 234), 0.4);
+
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+@include mobile {
+  .sobre-container {
+    padding-top: 10rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .cta-box {
+    padding: 1.5rem;
+  }
+}
+
+@include mobile-landscape {
+  .sobre-container {
+    padding-top: 7rem;
+  }
+}

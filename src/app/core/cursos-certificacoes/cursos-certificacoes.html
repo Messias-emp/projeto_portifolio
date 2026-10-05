@@ -1,0 +1,46 @@
+<section class="certificacoes layout-container">
+  <h2>Cursos & Certificações</h2>
+
+  <ul>
+    <li *ngFor="let c of certificacoes">
+      <span>
+        <strong>{{ c.titulo }}</strong>
+        <small>{{ c.instituicao }}</small>
+        <small>{{c.descricao}}</small>
+      </span>
+
+      <button class="btn-cert"
+             (click) = "openModal(c)">
+        Ver certificado-
+      </button>
+
+
+    </li>
+  </ul>
+<!-- MODAL -->
+<div class="modal-backdrop"
+     *ngIf="isModalOpen"
+     (click)="closeModal()">
+
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <header>
+      <h3>{{ selectedCurso?.titulo }}</h3>
+      <button class="close"
+              (click)="closeModal()">✕</button>
+    </header>
+
+<iframe
+  *ngIf="safePdfUrl"
+  [src]="safePdfUrl"
+  title="{{ selectedCurso?.titulo }} - certificado"
+  width="100%"
+  height="100%"
+  frameborder="0">
+</iframe>
+
+
+  </div>
+</div>
+</section>
+

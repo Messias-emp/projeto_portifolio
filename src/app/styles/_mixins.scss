@@ -1,0 +1,47 @@
+/* Breakpoints estratégicos */
+/* ===============================
+   Breakpoints do projeto
+   =============================== */
+
+$bp-mobile: 768px;       // Todos os celulares (portrait)
+$bp-mobile-land: 844px;  // Celulares deitados
+$bp-tablet: 1024px;      // Tablets
+$bp-desktop: 1280px;     // Desktops
+$bp-ultra: 1440px;       // Telas grandes
+
+
+
+/* Mixins otimizados */
+/* ===============================
+   Mixins responsivos
+   =============================== */
+
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (max-width: #{$bp-mobile-land}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$bp-mobile + 1}) and (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$bp-desktop}) {
+    @content;
+  }
+}
+
+@mixin ultra-up {
+  @media (min-width: #{$bp-ultra}) {
+    @content;
+  }
+}

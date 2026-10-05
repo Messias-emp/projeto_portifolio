@@ -1,0 +1,28 @@
+<header class="header-home">
+  <div class="header-container layout-container">
+    <a routerLink="/" class="logo-area" (click)="closeMenu()">
+      <img src="assets/logo-perfil.png" alt="Emanuel Pinheiro">
+      <div class="brand-info">
+        <span class="brand">Emanuel Pinheiro</span>
+        <span class="title">Desenvolvedor Front-End</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    @if (menuOpen) {
+      <div class="menu-backdrop" (click)="closeMenu()"></div>
+    }
+
+    <nav class="menu" [class.active]="menuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/sobre" routerLinkActive="active" (click)="closeMenu()">Sobre</a>
+      <a routerLink="/projetos" routerLinkActive="active" (click)="closeMenu()">Projetos</a>
+      <a routerLink="/contatos" routerLinkActive="active" (click)="closeMenu()">Contatos</a>
+    </nav>
+  </div>
+</header>

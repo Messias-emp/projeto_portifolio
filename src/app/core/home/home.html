@@ -1,0 +1,52 @@
+<section class="home-container layout-container">
+  <div class="home-content" [style.opacity]="contentOpacity">
+    <div class="hero-badge">
+      <span class="badge-icon">⚡</span>
+      <span>Desenvolvedor FrontEnd / Backend</span>
+    </div>
+
+    <h1 class="title">
+      Olá, eu sou
+      <span class="highlight-text">Emanuel Pinheiro</span>
+    </h1>
+
+    <h2 class="subtitle">
+      Transformando ideias em experiências digitais incríveis
+    </h2>
+
+    <p class="description">
+      Especializado em criar interfaces modernas, responsivas e acessíveis com
+      <strong>Angular</strong>, <strong>React</strong>, <strong>TypeScript</strong> e <strong>Node.js</strong>.
+      Focado em performance, componentização e boas práticas de código.
+    </p>
+
+    <div class="cta-area">
+      <a routerLink="/projetos" class="btn btn-primary" routerLinkActive="active">
+        <span>Ver Projetos</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a routerLink="/contatos" class="btn btn-secondary">
+        <span>Entre em Contato</span>
+      </a>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Projetos Concluídos</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">Tecnologias</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-cursos-certificacoes></app-cursos-certificacoes>
